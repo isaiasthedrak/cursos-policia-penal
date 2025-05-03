@@ -1,146 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso formaçao de policial penal</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f7f7f7;
-      color: #333;
-    } 
-   
-    nav {
-      background: #000000;
-      color: rgb(255, 255, 255);
-      padding: 1em 2em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav h2 {
-      margin: 0;
-    }
-    nav a {
-      color: rgb(255, 255, 255);
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    header {
-      background: linear-gradient(135deg, #131313);
-      color: white;
-      padding: 20px 10px;
-      text-align: center;
-      border-radius: 0 0 40px 40px;
-    }
-    header h1 {
-      font-size: 3.5em;
-      margin-bottom: 15px;
-    }
-    header p {
-      font-size: 1.4em;
-      margin-bottom: 30px;
-    }
-    a.button {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #037215;  
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 1em;
-    }
-    .slide {
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.08);
-      margin-top: 40px;
-    }
-    .slide h2 {
-      font-size: 2em;
-      color: #000000;
-    }
-    .slide-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
-    }
-    .slide-content .text, .slide-content .media {
-      flex: 1 1 400px;
-    }
-    .slide img, .slide video {
-      width: 100%;
-      border-radius: 12px;
-    }
-    footer {
-      margin-top: 25px;
-      background: #000000;
-      color: white;
-      text-align: center;
-      padding: 5px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site com Navbar e Área de Cursos</title>
+  
+  
 </head>
 <body>
-  <!-- Navegação -->
-  <nav>
-    <h2>👮 Curso formaçao de policial penal</h2>
-    <div>
-      <a href="#home">Inicio</a>
-      <a href="#slide">Slide</a>
-     </div>
-  </nav>
+  <!-- ===== NAVBAR NO CANTO SUPERIOR DIREITO ===== -->
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+    <nav class="navbar" id="navbar">
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
 
-  <!-- Página Inicial -->
-  <div id="home">
-    <header>
-      <h1>Bem-vindo ao Curso</h1>
-      <p>aprenda e se torne um policial penitenciario na cidade de conexao rj.</p>
-      <a class="button" href="#slide">Começar</a>
-    </header>
-  </div>
-
-  <!-- Página de Slide -->
-  <div id="slide" class="container">
-    <div class="slide">
-      <h2>Slide 1: o que e um policial penitenciario</h2>
-      <div class="slide-content">
-        <div class="text">
-          <p>Este é o conteúdo inicial do curso. Aqui você pode descrever conceitos, dar exemplos ou introduzir perguntas para os alunos pensarem.</p>
-        </div>
-        <div class="media">
-          <img src="https://dhg1h5j42swfq.cloudfront.net/2021/12/14100129/forca-1132x670-1-1024x606.jpg" alt="Imagem ilustrativa">
+  <!-- ===== CONTEÚDO CENTRAL - CURSOS DA FACULDADE ===== -->
+  <main>
+    <div class="slide-area">
+      <!-- Curso: Engenharia -->
+      <div class="course-section">
+        <h2>Engenharia</h2>
+        <div class="course-grid">
+          <div class="course-box">Engenharia Civil</div>
+          <div class="course-box">Engenharia Mecânica</div>
+          <div class="course-box">Engenharia Elétrica</div>
         </div>
       </div>
-    </div>
 
-    <div class="slide">
-      <h2>Slide 2: Conceito Principal</h2>
-      <div class="slide-content">
-        <div class="text">
-          <p>Explique o conceito principal de forma clara, utilizando exemplos visuais sempre que possível.</p>
-        </div>
-        <div class="media">
-          <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+      <!-- Curso: Saúde -->
+      <div class="course-section">
+        <h2>Saúde</h2>
+        <div class="course-grid">
+          <div class="course-box">Enfermagem</div>
+          <div class="course-box">Medicina</div>
+          <div class="course-box">Farmácia</div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Rodapé -->
-  <footer id="contato">
-    <p>CursoX - Todos os direitos reservados © 2025</p>
-    <p>Contato: 🟧isaias_a_vida. </p>
-  </footer>
+      <!-- Curso: Tecnologia -->
+      <div class="course-section">
+        <h2>Tecnologia</h2>
+        <div class="course-grid">
+          <div class="course-box">Análise de Sistemas</div>
+          <div class="course-box">Ciência da Computação</div>
+          <div class="course-box">Engenharia de Software</div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <h2>Tecnologia</h2>
+        <div class="course-grid">
+          <div class="course-box">Análise de Sistemas</div>
+          <div class="course-box">Ciência da Computação</div>
+          <div class="course-box">Engenharia de Software</div>
+        </div>
+      </div>
+      <!-- Adicione mais seções conforme necessário -->
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
